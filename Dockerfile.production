@@ -1,6 +1,8 @@
 FROM ruby:2.5.0
 MAINTAINER paul.trippett@tuskerdirect.com
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV NGINX_VERSION 1.13.7-1~jessie
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES 1
